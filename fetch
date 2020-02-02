@@ -15,6 +15,7 @@ fetch_component () {
 		git clean -fdx
 		git reset --hard origin/master
 		git pull
+        cd ..
 	else
 		rm -rf "nemo"
                 msg "Downloading nemo"
@@ -24,5 +25,4 @@ fetch_component () {
 }
 
 fetch_component "nemo" || { msg "nemo download problem"; exit 1; }
-cd "nemo"
 exit 0

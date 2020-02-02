@@ -13,7 +13,7 @@ msg () {
 build_component () {
 	cd "nemo"
 	msg "Patching nemo"
-	patch -p1 < ../nemo-on-mate.patch || return 1
+	patch -p1 < ../nemo_on_mate.patch || return 1
 
 	msg "Building nemo"
 	dpkg-buildpackage --no-sign || return 1
