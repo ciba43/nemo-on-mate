@@ -14,8 +14,8 @@ install_component () {
 	msg "Installing nemo"
 	
 	sudo dpkg -i libnemo-extension1_*.deb
-	sudo dpkg -i nemo_*.deb
 	sudo dpkg -i nemo-data_*.deb
+	sudo dpkg -i nemo_*.deb
 
 	return 0
 }
