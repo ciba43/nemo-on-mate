@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Message function
+msg () {
+	echo "************ $1 ************"
+}
+
+# # Installation prefix
+# if ! [ "$prefix" ]; then
+# 	prefix=/usr
+# fi
+
+install_component () {
+	msg "Installing nemo"
+	
+	sudo dpkg -i libnemo-extension1_*.deb
+	sudo dpkg -i nemo_*.deb
+	sudo dpkg -i nemo-data_*.deb
+
+	return 0
+}
+
+install_component "nemo" || { msg "nemo installation failed" && exit 1; }
+exit 0
